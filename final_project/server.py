@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-
 from machinetranslaton import translator
 
 app = Flask("Web Translator")
