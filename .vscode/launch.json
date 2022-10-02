@@ -1,0 +1,33 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python-Modul",
+            "type": "python",
+            "request": "launch",
+            "module": "${command:extension.commandvariable.file.relativeDirDots}.${fileBasenameNoExtension}",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "${fileBasename}",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "cwd": "${workspaceFolder}/${relativeFileDirname}",
+            "jinja": true,
+            "justMyCode": true
+        }
+    ]
+}

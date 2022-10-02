@@ -1,5 +1,7 @@
 import unittest
-from translator import french_to_english,english_to_french
+
+from translator import english_to_french, french_to_english
+
 
 class TestSquare(unittest.TestCase):
 
@@ -12,3 +14,6 @@ class TestSquare(unittest.TestCase):
         french_text= 'Bonjour'
         english_text=french_to_english(french_text)
         self.assertEqual(english_text, 'Hello')
+
+if __name__ == '__main__':
+    unittest.main()
